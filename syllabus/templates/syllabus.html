@@ -2,9 +2,9 @@
 <html> <head>
 <title>Course Schedule</title>
   <link rel="stylesheet" type="text/css" href="static/css/syllabus.css"
-   media="screen"/> 
+   media="screen"/>
   <link rel="stylesheet" type="text/css" href="static/css/syllabus-print.css"
-   media="print"/> 
+   media="print"/>
 
 </head>
 
@@ -17,13 +17,18 @@
   <tr class="even">
   {% else %}
   <tr class="odd">
-  {% endif %}	   
+  {% endif %}
+  {% if entry.highlight == 'True' %}
+    <td class="week" style="background-color: rgb(50,250,50);">{{ entry.week }}</td>
+  {% else %}
     <td class="week">{{ entry.week }}</td>
+  {% endif %}
+    <td class="date">{{ entry.date }}</td>
     <td class="topic">{{ entry.topic }}</td>
     <td class="project">{{ entry.project}}</td>
   </tr>
   {% endfor %}
-  
+
 
 
 

@@ -1,12 +1,12 @@
 /*
- * A simple style sheet for course schedules 
+ * A simple style sheet for course schedules
  *
  * Original : M Young, September 2015
- * Revised:  
+ * Revised:
  */
 
 body {
-	background: #EEE; 
+	background: #EEE;
 	color: #444;
 	font: normal 85% "Lucida Sans Unicode",sans-serif;
 	margin: 0;
@@ -18,6 +18,8 @@ table .class-schedule: {
     color: rgb(0,102,0);
     margin: 5px;
     padding: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 tr.odd {
@@ -26,15 +28,27 @@ tr.odd {
 }
 
 tr.even {
-    /* A little lighter */ 
+    /* A little lighter */
     background-color: rgb(224,213,179);
 }
 
+tr.highlight {
+    background-color: rgb(100,200,100);
+}
+
 .class-schedule .week {
-    
+
     font-weight: bolder;
-    font-size: 150%; 
-    text-align: center; 
+    font-size: 150%;
+    text-align: center;
+}
+
+.class-schedule .date {
+
+    font-weight: bolder;
+    font-size: 150%;
+    text-align: center;
+
 }
 
 .class-schedule .topic {
@@ -46,7 +60,7 @@ tr.even {
 .class-schedule .project {
     border-left-style: solid;
     border-left-width: 1px;
-    border-left-color: black; 
+    border-left-color: black;
     padding-left: 2ex;
     font-style: italic;
 }
